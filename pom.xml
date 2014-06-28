@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.omc</groupId>
 	<artifactId>sanity</artifactId>
-	<version>1.1.0</version>
+	<version>1.2.1</version>
 	<repositories>
 		<repository>
 			<id>private-release</id>
@@ -16,17 +16,20 @@
 			<url>s3://omc-maven/snapshot</url>
 		</repository>
 	</repositories>
+  <properties>
+    <solr.version>4.9.0</solr.version>
+  </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.solr</groupId>
 			<artifactId>solr</artifactId>
-			<version>4.7.0</version>
+			<version>${solr.version}</version>
 			<type>war</type>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.solr</groupId>
 			<artifactId>solr-core</artifactId>
-			<version>4.7.0</version>
+			<version>${solr.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
